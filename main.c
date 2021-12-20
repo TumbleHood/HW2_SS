@@ -1,23 +1,24 @@
 #include "my_mat.h"
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#define WORD 30
-#define TEXT 1024
 
-int main(void){
 
-    char text[TEXT];
-    char word[WORD];
-    readWord(word);
-    readText(text);
+int main()
+{
+    int matrix[10][10];
+    char input = getchar(); //read a character from the user
 
-    printf("Gematria Squences: ");
-    printGematria(word, text);
-    printf("\nAtbash Sequences: ");
-    printAtbash(word, text);
-    printf("\nAnagram Seqcuences: ");
-    printAnagram(word, text);
+    while (input != 'D'){ //while the character is not 'D', call the corresponding function
+        if (input == 'A'){
+            funcA(matrix);
+        }
+        else if (input == 'B'){
+            funcB(matrix);
+        }
+        else if (input == 'C'){
+            funcC(matrix);
+        }
+        input = getchar();
+    }
 
     return 0;
 }

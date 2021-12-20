@@ -2,7 +2,7 @@ CC = gcc
 AR = ar
 CFLAGS = -Wall -g
 OBJS = main.o my_mat.o
-OUT = stringProg
+OUT = connections
 
 main.o: main.c my_mat.h
 	$(CC) $(CFLAGS) -c main.c
